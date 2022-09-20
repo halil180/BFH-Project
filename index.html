@@ -6,32 +6,195 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
     <title>Hello Worldasd!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+  
+
+    <main>
+
+    <nav class="navbar navbar-dark    flip-card-bg mb-5">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <i class="fa-solid fa-bars " style="color: #F9C301;"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled">Disabled</a>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <button type="button" class="btn-close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></button>
+          </div>
+          <div class="offcanvas-body bg-dark">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </div>
     </nav>
-    <h1 class="bg-danger">asd World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-    <a href="snake.html">snake</a>
+
+    <h1 class="text-center  display-6">BFH Project</h1>
+
+<div class="container">
+ <div class="row d-flex  justify-content-center">
+
+
+  <div class="flip-card col-md-3 ">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="assets/snake.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>Memory Game </h1> 
+        <p>Matching Card Pairs is a fun and addictive puzzle game. Try to match pairs in as little moves as possible</p> 
+     
+        <a class="btn btn-primary" href="snake.html" >Play Memory Game</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="flip-card col-md-3 ">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="assets/snake.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>Snake</h1> 
+        <p>a video game genre where the player maneuvers a growing line that becomes a primary obstacle to itself.</p> 
+     
+        <a class="btn btn-primary" href="snake.html" >play snake</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card col-md-3  " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card col-md-3  " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="flip-card col-md-3  mt-2 " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+  <div class="flip-card col-md-3 mt-2  " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="flip-card col-md-3 mt-2  " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+    <div class="flip-card col-md-3 mt-2  " >
+    <div class="flip-card-inner">
+      <div class="flip-card-front" >
+        <img src="assets/math.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back flip-card-bg d-flex justify-content-around align-content-center flex-column">
+        <h1>John Doe</h1> 
+        <p>Architect & Engineer</p> 
+        <p>We love that guy</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container " id="footer">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <span class="text-muted">&copy; 2022 Halil Kömürcü </span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" target="_blank" href="https://github.com/halil180/BFH-Project"><i class="fa-brands fa-lg fa-github"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+    
+
+
+ </div>
+</div>
+</main>
+
     <!-- You can also require other files to run in this process -->
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./renderer.js"></script>
   </body>
 </html>
