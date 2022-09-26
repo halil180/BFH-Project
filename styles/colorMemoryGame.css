@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: #37556E;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.gameBoard{
+    background-color: rgb(124, 122, 122);
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    height: 750px;
+    width: 750px;
+    flex-direction: column;
+}
+#score{
+  font-size: xx-large;
+    width: 80%;
+    text-align: center;
+    color: white;
+    background-color: rgb(82, 97, 82);
+    border-radius: 20px;
+}
+#greenSquare {
+      height: 20em;
+      width: 20em;
+    background-color: green;
+    /* background:url('./assets/bfh.png'); */
+    /* background:url('../assets/bfh.png')no-repeat  ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: green; */
+    border-radius: 20px;
+  
+  }
+  #bfhYellowSquare {
+    height: 20em;
+    width: 20em;
+    background-color: #F9C301;
+    border-radius: 20px;
+  }
+  #policeBlueSquare {
+    height: 20em;
+    width: 20em;
+    background-color:#37556E;
+    border-radius: 20px;
+  }
+  #redSquare {
+    height: 20em;
+    width: 20em;
+    background-color: red;
+    border-radius: 20px;
+  }
+  .squareContainer{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    /* background-color: red; */
+  }
+
+  .btn-bfh{
+    background-color: #F9C301;
+    padding: 20px;
+    font-size: xx-large;
+    border-radius: 20px;
+  }
+
+
+  .btn-bfh:hover{
+    background-color: #f9c301a0;
+    cursor: pointer;
+    font-style: italic;
+  }
+
+  #redSquare:hover, #bfhYellowSquare:hover,#policeBlueSquare:hover,#greenSquare:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    opacity: 0.8;
+  }

@@ -5,15 +5,153 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/snake.css">
-        <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./styles/memoryGame.css ">
     <title>Hello Worldasd!</title>
 </head>
-<body>
+<body id="bg">
 
- 
-        
-       
-    <script src="jsFiles/snake.js"></script>
+   
+  <div class="wrapper gameBoard">
+    <h1 id="time" class="text-center"></h1>
+    <ul class="cards">
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/cover.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-1.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-2.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="images/img-2.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-3.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-3.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-4.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-5.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-5.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-6.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-6.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-7.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-7.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-8.png" alt="card-img">
+        </div>
+      </li>
+      <li class="card">
+        <div class="view front-view">
+          <i class="fa-solid fa-question"></i>
+        </div>
+        <div class="view back-view">
+          <img src="./assets/img-8.png" alt="card-img">
+        </div>
+      </li>
+
+    </ul>
+    <div class="row d-flex justify">
+      <button class="btn btn-primary mb-5" id="reset">reset</button>
+      <a href="index.html"><i class="fa-solid fa-left-long fa-2xl"></i> </a>
+    </div>
+  </div>
+
+
+    <script type="module" src="jsFiles/MemoryGame.js"></script>
 </body>
 </html>
