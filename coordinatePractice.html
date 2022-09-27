@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/coordinatePractice.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="score-container">
+            <a href="index.html"><i class="fa-solid fa-left-long fa-2xl"></i> </a>
+            <h1 class="display-4" id="numOfCorrectAnswers">correct :0</h1>
+            <h1 class="display-4" id="numOfWrongAnswers">wrong : 0</h1>
+            <h1 id="demo"></h1>
+        </div>
+        <div class="container">
+
+            <div id="coordinate-one-three">
+                <h1 id="y" class="display-4">Y-Axis</h1>
+    
+            </div>
+
+
+            <div id="coordinate-two-three"></div>
+
+            <div id="coordinate-three-three"></div>
+
+            <div  id="coordinate-one-two"></div>
+            
+            <div id="coordinate-two-two"></div>
+
+            <div id="coordinate-three-two"></div>
+
+            <div id="coordinate-one-one">
+                <span>
+                    1
+                </span>
+            </div>
+            <div id="coordinate-two-one"></div>
+            <div id="coordinate-three-one">
+                <h1 id="X-Axis" class="display-4">X-Axis</h1>
+            </div>
+        </div>
+
+        <div class="contoller-container">
+            <p>type the coordinates without any spaces or commas (1.digit X-Axis ,2.digit Y-Axis)</p>
+            <input  type="text" name="" id="userInput">
+        </div>
+
+    </main>
+
+
+
+<script src="./jsFiles/coordinatePractice.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.container {
+
+    height: 600px;
+    width: 600px;
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .container div {
+    background-color: #37556E;
+    aspect-ratio: 1;
+  }
+
+
+  #coordinate-one-three::before{
+    content: "3";
+    position: relative;
+    right: 40%;
+    top: 30%;
+    font-size: xx-large;
+  }
+
+
+  .contoller-container{
+    padding: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+ 
+
+ #y{
+
+    position: relative;
+    bottom: 60%;
+    right:90%;
+    
+  }
+
+
+
+  #coordinate-one-two::before{
+    content: "2";
+    position: relative;
+    right: 40%;
+    top: 30%;
+    font-size: xx-large;
+  }
+
+
+
+  #coordinate-one-one::before{
+    content: "1";
+    position: relative;
+    right: 40%;
+    top: 30%;
+    font-size: xx-large;
+  }
+
+  #coordinate-one-one span{
+    position: relative;
+    top: 100%;
+    left: 35%;
+    font-size: xx-large;
+  }
+
+  #coordinate-two-one::before{
+    content: "2";
+    position: relative;
+    top: 100%;
+    left: 45%;
+    font-size: xx-large;
+  }
+
+
+  #coordinate-three-one::before{
+    content: "3";
+    position: relative;
+    top: 100%;
+    left: 45%;
+    font-size: xx-large;
+  }
+
+
+
+
+  #X-Axis{
+    position: relative;
+    top: 80%;
+    left:110%;
+  }
+
+  .score-container{
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: #F9C301;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 7%;
+    align-items: center;
+
+  }

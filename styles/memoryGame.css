@@ -113,3 +113,9 @@ body{
 .gameBoard{
   background-color: #F9C301;
 }
+
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
