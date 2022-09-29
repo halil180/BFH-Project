@@ -1,3 +1,4 @@
+const btn = document.getElementById('btn')
 const circleOne = document.getElementById('circleOne');
 const circleTwo = document.getElementById('circleTwo');
 const circleThree = document.getElementById('circleThree');
@@ -6,19 +7,75 @@ const circleFive = document.getElementById('circleFive');
 const circleSix = document.getElementById('circleSix');
 const circleSeven = document.getElementById('circleSeven');
 const circleEight = document.getElementById('circleEight');
-let circleOneClickCounter = 0;
-let circleTwoClickCounter = 0;
-let circleThreeClickCounter = 0;
-let circleFourClickCounter = 0;  
-let circleFiveClickCounter = 0 ;
-let circleSixClickCounter = 0 ;
-let circleSevenClickCounter = 0 ;
-let circleEightClickCounter = 0 ;
+let circleOneClickCounter=0;
+let circleTwoClickCounter=0;
+let circleThreeClickCounter=0;
+let circleFourClickCounter=0;  
+let circleFiveClickCounter=0;
+let circleSixClickCounter=0;
+let circleSevenClickCounter=0;
+let circleEightClickCounter=0;
 
+
+let wrongAnswerCounter= 0;
+let correctAnswerCounter= 0;
 // Initialisation
 /////////
+let circles = [circleOne,circleTwo,circleThree,circleFour,circleFive,circleSix,circleSeven,circleEight]
+let colors=['red','blue','black']
+let  randomPattern =[] 
+// for (let index = 0; index < 7; index++) {
 
-let randomPattern = [circleOne,circleTwo,circleThree,circleFour,circleFive,circleSix,circleSeven,circleEight]
+//     randomPattern = [{circle:circles[Math.floor(Math.random() * circles.length)],color:colors[Math.floor(Math.random()*colors.length)]}]
+// }
+for (let index = 0; index < circles.length; index++) {
+    randomPattern.push({circle:circles[index],color:colors[Math.floor(Math.random()*colors.length)]})
+}
+
+
+
+function showPattern() {
+    circleOne.disabled=true
+    circleTwo.disabled=true
+    circleThree.disabled=true
+    circleFour.disabled=true
+    circleFive.disabled=true
+    circleSix.disabled=true
+    circleSeven.disabled=true
+    circleEight.disabled=true
+
+    circleOne.style.backgroundColor = randomPattern[0].color;
+    circleTwo.style.backgroundColor = randomPattern[1].color;
+    circleThree.style.backgroundColor = randomPattern[2].color;
+    circleFour.style.backgroundColor = randomPattern[3].color;
+    circleFive.style.backgroundColor = randomPattern[4].color;
+    circleSix.style.backgroundColor = randomPattern[5].color;
+    circleSeven.style.backgroundColor = randomPattern[6].color;
+    circleEight.style.backgroundColor = randomPattern[7].color;
+
+
+setTimeout(function(){
+    circleOne.disabled=false
+    circleTwo.disabled=false
+    circleThree.disabled=false
+    circleFour.disabled=false
+    circleFive.disabled=false
+    circleSix.disabled=false
+    circleSeven.disabled=false
+    circleEight.disabled=false
+    circleOne.style.backgroundColor = "white";
+    circleTwo.style.backgroundColor = "white";
+    circleThree.style.backgroundColor = "white";
+    circleFour.style.backgroundColor = "white";
+    circleFive.style.backgroundColor = "white";
+    circleSix.style.backgroundColor = "white";
+    circleSeven.style.backgroundColor = "white";
+    circleEight.style.backgroundColor = "white";
+}, 5000); //Time before execution
+}
+
+showPattern()
+console.log(randomPattern)
 
 
 const handleClick = (pCircle,pCircleClickCounter) => {
@@ -66,8 +123,8 @@ circleFour.addEventListener('click',() => {
     handleClick(circleFour,circleFourClickCounter);
 });
 circleFive.addEventListener('click',() => {
-    if(circleFourClickCounter == 3){
-        circleFourClickCounter = 0;
+    if(circleFiveClickCounter == 3){
+        circleFiveClickCounter = 0;
     }
     circleFiveClickCounter += 1;
     handleClick(circleFive,circleFiveClickCounter);
@@ -94,3 +151,47 @@ circleEight.addEventListener('click',() => {
     circleEightClickCounter += 1;
     handleClick(circleEight,circleEightClickCounter);
 });
+
+function checkAnswer(){
+if (
+    circleOne.style.backgroundColor ==randomPattern[0].color &&
+    circleTwo.style.backgroundColor ==randomPattern[1].color &&
+    circleThree.style.backgroundColor ==randomPattern[2].color &&
+    circleFour.style.backgroundColor ==randomPattern[3].color &&
+    circleFive.style.backgroundColor ==randomPattern[4].color &&
+    circleSix.style.backgroundColor ==randomPattern[5].color &&
+    circleSeven.style.backgroundColor ==randomPattern[6].color &&
+    circleEight.style.backgroundColor ==randomPattern[7].color 
+    ) {
+   alert("you won bitch")
+   correctAnswerCounter++
+   generateNextLevel();
+}else{
+    wrongAnswerCounter++
+    alert("you lost bitch")
+    generateNextLevel();
+}
+}
+function generateNextLevel() {
+    circleOneClickCounter = 0;
+    circleTwoClickCounter = 0;
+    circleThreeClickCounter = 0;
+    circleFourClickCounter = 0;  
+    circleFiveClickCounter = 0 ;
+    circleSixClickCounter = 0 ;
+    circleSevenClickCounter = 0 ;
+    circleEightClickCounter = 0 ;
+
+    randomPattern =[] 
+for (let index = 0; index < circles.length; index++) {
+    randomPattern.push({circle:circles[index],color:colors[Math.floor(Math.random()*colors.length)]})
+}
+
+showPattern();
+}
+
+
+btn.addEventListener('click',()=> {
+
+    checkAnswer();
+})
