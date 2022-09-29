@@ -11,14 +11,10 @@ main{
     height: 100vh;
     align-items: center;
     flex-direction: column;
-    
-
 }
 .container {
-
     height: 600px;
     width: 600px;
- 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
@@ -26,10 +22,12 @@ main{
   .container div {
     background-color: #37556E;
     aspect-ratio: 1;
+    color: white;
   }
 
 
   #coordinate-one-three::before{
+    color: black;
     content: "3";
     position: relative;
     right: 40%;
@@ -58,6 +56,7 @@ main{
 
 
   #coordinate-one-two::before{
+    color: black;
     content: "2";
     position: relative;
     right: 40%;
@@ -68,6 +67,7 @@ main{
 
 
   #coordinate-one-one::before{
+    color: black;
     content: "1";
     position: relative;
     right: 40%;
@@ -85,6 +85,7 @@ main{
   #coordinate-two-one::before{
     content: "2";
     position: relative;
+    color: black;
     top: 100%;
     left: 45%;
     font-size: xx-large;
@@ -92,16 +93,13 @@ main{
 
 
   #coordinate-three-one::before{
+    color: black;
     content: "3";
     position: relative;
     top: 100%;
     left: 45%;
     font-size: xx-large;
   }
-
-
-
-
   #X-Axis{
     position: relative;
     top: 80%;
@@ -117,5 +115,4 @@ main{
     justify-content: space-around;
     margin-bottom: 7%;
     align-items: center;
-
   }

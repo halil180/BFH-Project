@@ -1,60 +1,67 @@
- const  coordinateOneThree = document.getElementById('coordinate-one-three')
- const  coordinateTwoThree = document.getElementById('coordinate-two-three')
- const  coordinateThreeThree= document.getElementById('coordinate-three-three')
- const  coordinateOneTwo= document.getElementById('coordinate-one-two')
- const  coordinateTwoTwo= document.getElementById('coordinate-two-two')
- const  coordinateThreeTwo= document.getElementById('coordinate-three-two')
- const  coordinateOneOne= document.getElementById('coordinate-one-one')
- const  coordinateTwoOne= document.getElementById('coordinate-two-one')
- const  coordinateThreeOne= document.getElementById('coordinate-three-one')
-
- const numOfCorrectAnswers = document.getElementById('numOfCorrectAnswers')
- const numOfWrongAnswers = document.getElementById('numOfWrongAnswers')
-
-
-
-
-
+const coordinateOneThree = document.getElementById('coordinate-one-three');
+const coordinateTwoThree = document.getElementById('coordinate-two-three');
+const coordinateThreeThree= document.getElementById('coordinate-three-three');
+const coordinateOneTwo= document.getElementById('coordinate-one-two');
+const coordinateTwoTwo= document.getElementById('coordinate-two-two');
+const coordinateThreeTwo= document.getElementById('coordinate-three-two');
+const coordinateOneOne= document.getElementById('coordinate-one-one');
+const coordinateTwoOne= document.getElementById('coordinate-two-one');
+const coordinateThreeOne= document.getElementById('coordinate-three-one');
+const numOfCorrectAnswers = document.getElementById('numOfCorrectAnswers');
+const numOfWrongAnswers = document.getElementById('numOfWrongAnswers');
+const main = document.getElementById('main');
+let userAnswer = '';
+let correctAnswer = 0;
+let wrongAnswer = 0;
 
 
+var setoneminutetime = new Date();
+setoneminutetime.setTime(Date.now() + 1 * 60 * 1000); // Add 1 minutes to current timestamp
+var countDownDate = new Date(setoneminutetime).getTime();
+//set interval for the actual countdown
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    //end time minus the current time
+    var distance = countDownDate - now;
 
-// Set the date we're counting down to
-// var setoneminutetime = new Date();
-// setoneminutetime.setTime(Date.now() + 1 * 60 * 1000); // Add 1 minutes to current timestamp
-// var countDownDate = new Date(setoneminutetime).getTime();
-// //set interval for the actual countdown
-// var x = setInterval(function() {
-//     var now = new Date().getTime();
-//     //end time minus the current time
-//     var distance = countDownDate - now;
-
-
-//     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-//     //show countdown  in div demo
-//     document.getElementById("demo").innerHTML = "Time left :" + minutes + "m " + seconds + "s ";
-//     if (distance < 0) {
-//         clearInterval(x);
-//         document.getElementById("demo").innerHTML = "EXPIRED";
-//     }
-// }, 1000);
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //show countdown  in div demo
+    document.getElementById("demo").innerHTML = "Time left :" + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
 
 
+        main.innerHTML = `
 
+        <style>
+        .btn-bfh{
+            background-color: #F9C301;
+            padding: 20px;
+            font-size: xx-large;
+            border-radius: 20px;
 
+        }
 
+    </style>
+        <div >
 
+        
 
+        <h1 class="display-4  text-success" id="numOfCorrectAnswers">correct answers :${correctAnswer}</h1>
+        <h1 class="display-4 text-danger" id="numOfWrongAnswers">wrong answers : ${wrongAnswer}</h1>
 
-
-
-
-
-
-
-
- const userInput =document.getElementById('userInput')
-
+        <button class="btn-bfh"  ><a href="colorMemoryGame.html">Play again ? </a></button>
+        
+        
+        </div>
+    
+        
+        `
+    }
+}, 1000);
+const userInput = document.getElementById('userInput');
 let coordinates = [ 
     {
         coordinateItem:    coordinateOneThree,
@@ -111,13 +118,8 @@ function getRandomCoordinate() {
     console.log(randomItem)
     randomItem.coordinateItem.style.background = 'red';
 }
-
-
 console.log(randomItem)
 // randomItem.style.background ="red";
-let userAnswer = ''
-let correctAnswer = 0;
-let wrongAnswer = 0;
 userInput.addEventListener('input', updateValue);
 userInput.addEventListener('keydown', submitAnswer);
 function submitAnswer(e) {
@@ -142,19 +144,8 @@ function submitAnswer(e) {
         }
        console.log('answer ', userAnswer)
     }
-  }
+}
 function updateValue(e) {
     userAnswer = e.target.value;
- console.log(e.target.value);
+    console.log(e.target.value);
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -31,7 +31,6 @@ const speed2 = document.querySelector("#speed2");
 const speed3 = document.querySelector("#speed3");
 speed1.addEventListener("click",function () {
     setSpeed(200)
-
 })
 speed2.addEventListener("click",function () {
     setSpeed(80)
@@ -71,7 +70,7 @@ function nextTick(){
             drawSnake();
             checkGameOver();
             nextTick();
-        }, speed);
+        }, speed); ///speed  1000 = 1 second
         console.log(speed)
     }
     else{

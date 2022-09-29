@@ -39,11 +39,6 @@ const redSquare = document.getElementById('redSquare');
 
 // greenSquare.style.backgroundImage = "url('file:///Users/mrapple/Desktop/MYPROJECT/BFH-Project/assets/bfh.png ')";
 
-
-
-
-
-
 function showLogo(pColor) {
    switch (pColor) {
     case greenSquare:
@@ -72,7 +67,6 @@ function showLogo(pColor) {
 }
 
 ///greenSquare.disabled = true;
-
 let compareIndex = 0;
 const colors = [greenSquare,bfhYellowSquare,policeBlueSquare,redSquare]
 let pattern =[]
@@ -83,10 +77,6 @@ for (let i = 0; i < level; i++) {
     pattern.push(colors[index]);
   //  console.log(colors[index])
 } 
-// for (let index = 0; index < pattern.length; index++) {
-//     showPattern(pattern[index])
-
-// }
 
 
 
@@ -138,7 +128,10 @@ redSquare.addEventListener('click',function name() {
 
 function checkColors(pColor) {
     answer.push(pColor)
-    if((compareIndex ==  level -1) && !gameOver && (answer.toString() === pattern.toString())) {
+
+    
+    
+    if((compareIndex ==  level -1) && !gameOver && (answer.toString() === pattern.toString())  &&  pattern[compareIndex] == answer[compareIndex]) {
         console.log('next level yeah')
         compareIndex = 0;
         level++
@@ -152,8 +145,7 @@ function checkColors(pColor) {
         }
         showPattern()
         
-        
-
+      
         // console.log(pattern,"my pattern")
         // console.log(answer, "my answer")
         // console.log(pattern[compareIndex], "pattern" , answer[compareIndex] , "answer")
@@ -167,16 +159,10 @@ function checkColors(pColor) {
         gameOver = true;
         app.innerHTML=`
         <div class="container" >
-        
-        
         <button class="btn-bfh"  ><a href="colorMemoryGame.html">Play again ? </a></button>
-        
-                    
-                </div>
+          
+        </div>
 
-        
-        
-        
         `
     }
 }
