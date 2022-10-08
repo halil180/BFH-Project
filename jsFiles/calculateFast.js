@@ -43,8 +43,6 @@ let sumOfSelected = randomBlocks
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
-
-
 // >>>>>>>>>>>>>>>>>FUNCTIONS And EVENTS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 //// create a next level with new values when user clicks enter
 const generateNextLevel = () => {

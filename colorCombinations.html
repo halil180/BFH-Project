@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <title>Document</title>
-       <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="styles/colorCombinations.css">
 </head>
 <body>
     <main>
+        <a href="index.html"><i class="fa-solid fa-left-long fa-2xl"></i> </a>
         <div class="container-fluid ">
             <div class="d-flex justify-content-around ">
-
-                <h1 class="text-success">Correct Answers :1</h1>
-                <h1 class="text-danger">Wrong Answers:1</h1>
+                <h1 class="text-success" id="correctAnswerCountContainer">Correct Answers :0</h1>
+                <h1 class="text-danger" id="wrongAnswerCountContainer">Wrong Answers:0</h1>
             </div>
         </div>
-        
         <div class="container mb-4 mt-4">
             <button id="circleOne" class="circle"></button>
             <button id="circleTwo" class="circle"></button>
@@ -30,10 +29,9 @@
             <button id="circleSeven" class="circle"></button>
             <button id="circleEight" class="circle"></button>
         </div>
-        <h1 class="display-4">1 click = <strong class="text-danger">red </strong>, 2 clicks = <strong class="text-primary">blue</strong>, 3 clicks = <strong class="text-dark">black</strong></h1>
+        <h1 class="display-4" >1 click = <strong class="text-danger">red </strong>, 2 clicks = <strong class="text-primary">blue</strong>, 3 clicks = <strong class="text-dark">black</strong></h1>
         <button class="btn btn-primary p-3" id="btn">submit answer</button>
     </main>
-
     <script src="./jsFiles/colorCombinations.js"></script>
 </body>
 </html>

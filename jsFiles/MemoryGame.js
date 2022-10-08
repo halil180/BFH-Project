@@ -1,5 +1,3 @@
-
-
 const cards = document.querySelectorAll(".card");
 const timer = document.getElementById("time");
 const background = document.getElementById('bg')
@@ -13,18 +11,15 @@ let counter = 0;
 function func(){
     let minutes = Math.floor(counter/60);
     let seconds =Math.floor(counter%60);
-    timer.innerHTML = `${minutes} min  ${seconds } sec`;
+    timer.innerHTML = `${minutes} min  ${seconds} sec`;
     counter++
-    return `${minutes} min  ${seconds } sec`
+    return `${minutes} min  ${seconds} sec`
 }
-
-
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add("flip");
         if(!cardOne) {
             return cardOne = clickedCard;
-            
         }
         cardTwo = clickedCard;
         disableDeck = true;
@@ -44,7 +39,6 @@ function matchCards(img1, img2) {
         cardOne = cardTwo = "";
         return disableDeck = false;
     }
-
     setTimeout(() => { //shake if two cars don't match
         background.classList.add('bg-danger')
         cardOne.classList.add("shake");
@@ -77,20 +71,9 @@ shuffleCard();
 cards.forEach(card => { // adding click event to all cards
     card.addEventListener("click", flipCard);
 });
-
-
 // Reload everything:
 function reload() {
     reload = location.reload();
 }
 // Event listeners for reload
 reset.addEventListener("click", reload, false);
-
-
-
-
-
-
-
-
-

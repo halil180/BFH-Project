@@ -25,6 +25,6 @@
     "electron-reloader": "^1.2.3"
   },
   "dependencies": {
-    "electron-alert": "^0.1.20"
+
   }
 }

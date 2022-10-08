@@ -13,8 +13,6 @@ const main = document.getElementById('main');
 let userAnswer = '';
 let correctAnswer = 0;
 let wrongAnswer = 0;
-
-
 var setoneminutetime = new Date();
 setoneminutetime.setTime(Date.now() + 1 * 60 * 1000); // Add 1 minutes to current timestamp
 var countDownDate = new Date(setoneminutetime).getTime();
@@ -36,6 +34,9 @@ var x = setInterval(function() {
         main.innerHTML = `
 
         <style>
+        main{
+            background:#37556E;
+        }
         .btn-bfh{
             background-color: #F9C301;
             padding: 20px;
@@ -43,14 +44,19 @@ var x = setInterval(function() {
             border-radius: 20px;
 
         }
+        a{
+            text-decoration: none;
+            color:#37556E;
+        }
 
     </style>
-        <div >
+    <a href="index.html"><i class="fa-solid fa-left-long fa-2xl text-light"></i> </a>
+        <div class="d-flex justify-content-center flex-column">
 
         
 
-        <h1 class="display-4  text-success" id="numOfCorrectAnswers">correct answers :${correctAnswer}</h1>
-        <h1 class="display-4 text-danger" id="numOfWrongAnswers">wrong answers : ${wrongAnswer}</h1>
+        <h1 class="display-2  text-success" id="numOfCorrectAnswers">correct answers : ${correctAnswer}</h1>
+        <h1 class="display-2 text-danger" id="numOfWrongAnswers">wrong answers : ${wrongAnswer}</h1>
 
         <button class="btn-bfh"  ><a href="colorMemoryGame.html">Play again ? </a></button>
         
@@ -109,7 +115,6 @@ let coordinates = [
 //  coordinateOneOne.style.background ="red";
 //  coordinateTwoOne.style.background ="red";
 //  coordinateThreeOne.style.background ="red";
-
 ///select a random coordinate from the array of coordinates
 let randomItem = coordinates[Math.floor(Math.random()*coordinates.length)];
 randomItem.coordinateItem.style.background = 'red';
@@ -136,13 +141,10 @@ function submitAnswer(e) {
             userInput.value =''
             randomItem.coordinateItem.style.background = '#37556E';
             getRandomCoordinate();
-
             ++wrongAnswer
-
             numOfWrongAnswers.innerHTML = `wrong : ${wrongAnswer}` 
-
         }
-       console.log('answer ', userAnswer)
+        console.log('answer ', userAnswer)
     }
 }
 function updateValue(e) {

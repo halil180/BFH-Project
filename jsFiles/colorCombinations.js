@@ -7,6 +7,8 @@ const circleFive = document.getElementById('circleFive');
 const circleSix = document.getElementById('circleSix');
 const circleSeven = document.getElementById('circleSeven');
 const circleEight = document.getElementById('circleEight');
+const correctAnswerCountContainer = document.getElementById('correctAnswerCountContainer');
+const wrongAnswerCountContainer = document.getElementById('wrongAnswerCountContainer');
 let circleOneClickCounter=0;
 let circleTwoClickCounter=0;
 let circleThreeClickCounter=0;
@@ -15,8 +17,6 @@ let circleFiveClickCounter=0;
 let circleSixClickCounter=0;
 let circleSevenClickCounter=0;
 let circleEightClickCounter=0;
-
-
 let wrongAnswerCounter= 0;
 let correctAnswerCounter= 0;
 // Initialisation
@@ -31,9 +31,6 @@ let  randomPattern =[]
 for (let index = 0; index < circles.length; index++) {
     randomPattern.push({circle:circles[index],color:colors[Math.floor(Math.random()*colors.length)]})
 }
-
-
-
 function showPattern() {
     circleOne.disabled=true
     circleTwo.disabled=true
@@ -43,7 +40,6 @@ function showPattern() {
     circleSix.disabled=true
     circleSeven.disabled=true
     circleEight.disabled=true
-
     circleOne.style.backgroundColor = randomPattern[0].color;
     circleTwo.style.backgroundColor = randomPattern[1].color;
     circleThree.style.backgroundColor = randomPattern[2].color;
@@ -52,8 +48,6 @@ function showPattern() {
     circleSix.style.backgroundColor = randomPattern[5].color;
     circleSeven.style.backgroundColor = randomPattern[6].color;
     circleEight.style.backgroundColor = randomPattern[7].color;
-
-
 setTimeout(function(){
     circleOne.disabled=false
     circleTwo.disabled=false
@@ -165,9 +159,11 @@ if (
     ) {
    alert("you won bitch")
    correctAnswerCounter++
+   correctAnswerCountContainer.innerHTML = correctAnswerCounter;
    generateNextLevel();
 }else{
     wrongAnswerCounter++
+    wrongAnswerCountContainer.innerHTML = wrongAnswerCounter;
     alert("you lost bitch")
     generateNextLevel();
 }
