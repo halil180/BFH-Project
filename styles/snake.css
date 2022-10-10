@@ -1,33 +1,25 @@
-#gameContainer{
+#gameContainer {
     text-align: center;
 }
-
-#gameBoard{
+#gameBoard {
     border: 3px solid;
 }
-
-#score{
+#score {
     font-family: "Permanent Marker", cursive;
     font-size: 100px;
 }
-
-
-main{
+main {
     display: flex;
     align-items: center;
     height: 100vh;
     justify-content: center;
-    background-color: #37556E;
+    background-color: #37556e;
     flex-direction: column;
 }
-
-.fa-left-long{
+.fa-left-long {
     color: white;
-  }
-  
-  .fa-left-long:hover{
+}
+.fa-left-long:hover {
     color: white;
-    text-shadow: 2px 2px #F9C301;
-    
-  
-  }
+    text-shadow: 2px 2px #f9c301;
+}

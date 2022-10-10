@@ -1,13 +1,15 @@
-body{
+body {
     background-color: #F9C301;
 }
-main{
+
+main {
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .container {
     height: 600px;
     width: 600px;
@@ -16,6 +18,7 @@ main{
     grid-gap: 5px;
     /* background-color: aqua; */
 }
+
 .container div {
     min-height: 200px;
     max-height: 200px;
@@ -25,23 +28,26 @@ main{
     justify-content: center;
     align-items: center;
 }
-.questionBlocks{
+
+.questionBlocks {
     color: white;
     font-size: 5rem;
     font-weight: 800;
 }
-input{
+
+input {
     margin: 30px;
     padding: 10px;
     width: 30%;
 }
-.fa-left-long{
+
+.fa-left-long {
     color: #37556E;
-  }
-  
-  .fa-left-long:hover{
+}
+
+.fa-left-long:hover {
     color: #37556E;
     text-shadow: 2px 2px white;
 
-  
-  }
+
+}

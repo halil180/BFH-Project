@@ -111,7 +111,6 @@ body{
 .gameBoard{
   background-color: #F9C301;
 }
-
 p {
   text-align: center;
   font-size: 60px;
@@ -120,12 +119,10 @@ p {
 .fa-left-long{
   color: #37556E;
 }
-
 .fa-left-long:hover{
   color: #37556E;
   text-shadow: 2px 2px white;
 }
-
 .btn-primary{
   background-color: #37556E !important;
   color: white !important;
@@ -151,4 +148,4 @@ color: white !important;
   box-shadow: none !important;
   text-shadow: none !important;
   border: none ;
- }
+}

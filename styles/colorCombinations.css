@@ -76,40 +76,36 @@ main {
   text-shadow: 2px 2px #f9c301;
 }
 
-
-
-
-.btn-primary{
-  background-color: #F9C301 !important;
-  color: #37556E !important;
+.btn-primary {
+  background-color: #f9c301 !important;
+  color: #37556e !important;
 }
-.btn-primary:active{
-box-shadow: none !important;
-text-shadow: none !important;
-border: none ;
-
-}
-.btn:active{
-  box-shadow: none !important;
-text-shadow: none !important;
-border: none ;
-}
-.btn:hover{
-  box-shadow: none !important;
-text-shadow: none !important;
-border: none ;
-color: white !important;
-}
-.btn:not(:hover) { 
+.btn-primary:active {
   box-shadow: none !important;
   text-shadow: none !important;
-  border: none ;
- }
- .rules{
+  border: none;
+}
+.btn:active {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: none;
+}
+.btn:hover {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: none;
+  color: white !important;
+}
+.btn:not(:hover) {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: none;
+}
+.rules {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
- }
+}
