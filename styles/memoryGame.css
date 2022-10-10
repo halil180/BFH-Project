@@ -117,3 +117,38 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
+.fa-left-long{
+  color: #37556E;
+}
+
+.fa-left-long:hover{
+  color: #37556E;
+  text-shadow: 2px 2px white;
+}
+
+.btn-primary{
+  background-color: #37556E !important;
+  color: white !important;
+}
+.btn-primary:active{
+box-shadow: none !important;
+text-shadow: none !important;
+border: none ;
+
+}
+.btn:active{
+  box-shadow: none !important;
+text-shadow: none !important;
+border: none ;
+}
+.btn:hover{
+  box-shadow: none !important;
+text-shadow: none !important;
+border: none ;
+color: white !important;
+}
+.btn:not(:hover) { 
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border: none ;
+ }

@@ -34,7 +34,6 @@ speed1.addEventListener("click",function () {
 })
 speed2.addEventListener("click",function () {
     setSpeed(80)
-   
 })
 speed3.addEventListener("click",function () {
     setSpeed(50)

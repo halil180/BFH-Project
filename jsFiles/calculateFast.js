@@ -144,27 +144,43 @@ let x = setInterval(function () {
     clearInterval(x);
     document.getElementById("timeLeft").innerHTML = "EXPIRED";
     document.getElementById("gameBoard").innerHTML = `
-        <style>
-        .btn-bfh{
-            background-color: #F9C301;
-            padding: 20px;
-            font-size: xx-large;
-            border-radius: 20px;
+    <style>
+    .btn-bfh{
+        padding: 20px;
+        font-size: xx-large;
+        border-radius: 20px;
+        background-color:#37556E;
+    }
+    h1{
+      text-align:center;
+    }
+        a,
+        a:link,
+        a:visited,
+       
+        a:active{
+            text-decoration: none;
+            color:white;
         }
-            a,
-            a:link,
-            a:visited,
-            a:hover,
-            a:active{
-                text-decoration: none;
-            }
-        </style>
-        <div class="container">
-        <h1 class="display-4  text-success" id="numOfCorrectAnswers">correct answers : ${rightAnswerCounter} </h1>
-        <h1 class="display-4 text-danger" id="numOfWrongAnswers">wrong answers :${wrongAnswerCounter}</h1>
-        <button class="btn-bfh"  ><a href="calculateFast.html">Play again ? </a></button>
-        </div>
-        `;
+    
+        a:hover{
+        color: #FcC121;
+        }
+    .flex-container{
+      height:100vh;
+      width:100vw;
+      display:flex;
+      align-items;center;
+      justify-content:center;
+      flex-direction:column;
+    }
+    </style>
+    <div class="flex-container">
+    <h1 class="display-4  text-success" id="numOfCorrectAnswers">correct answers : ${rightAnswerCounter} </h1>
+    <h1 class="display-4 text-danger" id="numOfWrongAnswers">wrong answers :${wrongAnswerCounter}</h1>
+    <button class="btn-bfh"  ><a href="calculateFast.html">Play again ? </a></button>
+    </div>
+    `;
     }
 }, 1000);
 ////////////////////////////////////////////////////////////////////////////

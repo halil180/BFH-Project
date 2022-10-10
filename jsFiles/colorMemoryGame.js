@@ -7,6 +7,18 @@ let gameOver = false;
 let level = 1;
 if (!gameOver) {
     app.innerHTML = `
+
+    <style>
+    .fa-left-long{
+    color: white;
+  }
+  
+  .fa-left-long:hover{
+    color: white;
+    text-shadow: 2px 2px #F9C301;
+    
+  
+  }</style>
 <div class="container">
 
 <div class="gameBoard">
@@ -22,10 +34,6 @@ if (!gameOver) {
 </div>
 </div>
 `
-}else{
-    app.innerHTML = `
-  <h1>game over :((</h1>
-  ` 
 }
 const score = document.getElementById('score')
 const greenSquare = document.getElementById('greenSquare');
@@ -91,7 +99,6 @@ function showPattern(){
       
 }
 showPattern()
-
 console.log(pattern , "pattern")
 greenSquare.addEventListener('click',function name() {
     checkColors(greenSquare)
@@ -112,9 +119,6 @@ redSquare.addEventListener('click',function name() {
 
 function checkColors(pColor) {
     answer.push(pColor)
-
-    
-    
     if((compareIndex ==  level -1) && !gameOver && (answer.toString() === pattern.toString())  &&  pattern[compareIndex] == answer[compareIndex]) {
         console.log('next level yeah')
         compareIndex = 0;
@@ -150,16 +154,14 @@ function checkColors(pColor) {
           text-decoration:none;
           color:#37556E;
         }
-        
-        
-        </style>
-        
+        </style>  
         <div class="container d-flex flex-column p-4" >
         <a href="index.html"><i class="m-4 text-light fa-solid fa-left-long fa-2xl"></i> </a>
+        <div class="display-1 text-light m-4">score : ${level}</div>
+      
         <button class="btn-bfh"  ><a href="colorMemoryGame.html">Play again ? </a></button>
           
         </div>
-
         `
     }
 }

@@ -25,7 +25,6 @@ let circles = [circleOne,circleTwo,circleThree,circleFour,circleFive,circleSix,c
 let colors=['red','blue','black']
 let  randomPattern =[] 
 // for (let index = 0; index < 7; index++) {
-
 //     randomPattern = [{circle:circles[Math.floor(Math.random() * circles.length)],color:colors[Math.floor(Math.random()*colors.length)]}]
 // }
 for (let index = 0; index < circles.length; index++) {
@@ -159,11 +158,11 @@ if (
     ) {
    alert("you won bitch")
    correctAnswerCounter++
-   correctAnswerCountContainer.innerHTML = correctAnswerCounter;
+   correctAnswerCountContainer.innerHTML = "Correct Answers :"+ correctAnswerCounter;
    generateNextLevel();
 }else{
     wrongAnswerCounter++
-    wrongAnswerCountContainer.innerHTML = wrongAnswerCounter;
+    wrongAnswerCountContainer.innerHTML = "Wrong Answers :" + wrongAnswerCounter;
     alert("you lost bitch")
     generateNextLevel();
 }

@@ -1,3 +1,6 @@
+body{
+    background-color: #F9C301;
+}
 main{
     /* background-color: red; */
     display: flex;
@@ -32,3 +35,13 @@ input{
     padding: 10px;
     width: 30%;
 }
+.fa-left-long{
+    color: #37556E;
+  }
+  
+  .fa-left-long:hover{
+    color: #37556E;
+    text-shadow: 2px 2px white;
+
+  
+  }

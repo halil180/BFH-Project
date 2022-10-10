@@ -116,3 +116,14 @@ main{
     margin-bottom: 7%;
     align-items: center;
   }
+
+  .fa-left-long{
+    color: white;
+  }
+  
+  .fa-left-long:hover{
+    color: white;
+    text-shadow: 2px 2px #37556E;
+    
+  
+  }
